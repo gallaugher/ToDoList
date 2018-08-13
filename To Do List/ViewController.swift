@@ -91,7 +91,8 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         return cell
     }
     
-    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+ 
         if editingStyle == .delete {
             toDoArray.remove(at: indexPath.row)
             toDoNotesArray.remove(at: indexPath.row)
